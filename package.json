@@ -1,0 +1,19 @@
+{
+  "name": "gkmf-site",
+  "version": "1.0.0",
+  "description": "Website for the Good Karma Music Festival",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Good-Karma-Music-Festival/gkmf-site.git"
+  },
+  "author": "Quargs Greene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Good-Karma-Music-Festival/gkmf-site/issues"
+  },
+  "homepage": "https://github.com/Good-Karma-Music-Festival/gkmf-site#readme"
+}
