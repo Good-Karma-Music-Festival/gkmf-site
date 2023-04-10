@@ -42,19 +42,6 @@
   transition: transform 200ms;
 }
 
-.lineup li {
-  display: inline-block;
-}
-.lineup p {
-  margin-left: 15rem;
-  margin-right: 15rem;
-  font-family: 'Roboto';
-}
-
-.lineup div {
-  text-align: center;
-}
-
 .card a {
   font-weight: 600;
   margin-bottom: 0.7rem;

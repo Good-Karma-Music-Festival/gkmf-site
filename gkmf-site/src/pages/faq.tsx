@@ -14,11 +14,16 @@ export default function Faq () {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
     </Head>
-    <h1 > Frequently Asked Questions </h1>
+    <h1 > Frequently Asked Questions (FAQ) </h1>
     <ul>
       <li>
-        <h2>Is water wet?</h2>
-        <h3></h3>
+        <h3 className={styles.faq}>Q. Is water wet?</h3>
+        <h4></h4>
+      </li>
+
+      <li>
+        <h3 className={styles.faq}>Q. Is mac and cheese available for purchase?</h3>
+        <h4></h4>
       </li>
     </ul>
   </>
