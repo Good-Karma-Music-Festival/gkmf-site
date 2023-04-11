@@ -57,7 +57,7 @@ export default function Home() {
 
             <li>
               <a
-                href="#"
+                href="/multimedia"
                 className={styles.card}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -68,7 +68,7 @@ export default function Home() {
 
             <li>
               <a
-                href="#"
+                href="/contact"
                 className={styles.card}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -79,7 +79,7 @@ export default function Home() {
 
             <li>
               <a
-                href="#"
+                href="/shop"
                 className={styles.card}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -18,12 +18,27 @@ export default function Faq () {
     <ul>
       <li>
         <h3 className={styles.faq}>Q. Is water wet?</h3>
-        <h4></h4>
+        <h4>A. Pylons are dry.</h4>
       </li>
 
       <li>
         <h3 className={styles.faq}>Q. Is mac and cheese available for purchase?</h3>
-        <h4></h4>
+        <h4>A. It is only if you donate belly button lint.</h4>
+      </li>
+
+      <li>
+        <h3 className={styles.faq}>Q. Did Luigi Russolo have an udder protruding from his left kneecap?</h3>
+        <h4>A. What do you think?</h4>
+      </li>
+
+      <li>
+        <h3 className={styles.faq}>Q. Where can I buy witchcraft supplies in advance of the festival?</h3>
+        <h4>A. You can find each of our vendors underneath either stage.</h4>
+      </li>
+
+      <li>
+        <h3 className={styles.faq}>Q. Does it hurt the horse?</h3>
+        <h4>No.</h4>
       </li>
     </ul>
   </>
