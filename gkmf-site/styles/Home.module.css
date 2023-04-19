@@ -1,3 +1,5 @@
+
+
 .main {
   display: flex;
   flex-direction: row;
@@ -5,6 +7,18 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+}
+
+
+.canvas{
+  background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242));
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
 }
 
 .description {
@@ -88,6 +102,7 @@
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     color: black;
+
   }
 
   .card:hover span {
@@ -96,9 +111,9 @@
 }
 
 @media (prefers-reduced-motion) {
-  .card:hover span {
+  /* .card:hover span {
     transform: none;
-  }
+  } */
 }
 
 /* Mobile */
@@ -191,11 +206,3 @@
   } */
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
