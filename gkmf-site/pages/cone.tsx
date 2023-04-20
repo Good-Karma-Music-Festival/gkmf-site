@@ -2,21 +2,23 @@ import React, { useState } from 'react';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { Texture, TextureLoader } from 'three';
 
-export default function Cube (props: any){
-  const meshRef = React.useRef();
-  const colorMap = useLoader(TextureLoader, '/gkmf-logo.png');
 
+export default function Cone(props: any){
+  const meshRef = React.useRef();
+  const colorMap =  useLoader(TextureLoader, '/waterpark.jpg');
 
   useFrame(({ clock }) => {
 
-    meshRef.current.rotation.y = clock.getElapsedTime() / 2;
+    meshRef.current.position.y = Math.sin(clock.getElapsedTime() / 2) ;
+
 
   });
 
   return (
+
     <mesh {...props} ref={meshRef} castShadow>
-      <boxGeometry args={[3, 3, 3]} />
+      <cylinderGeometry args={[0.5, 0.25, 1, 5]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>
   )
-}
+  }

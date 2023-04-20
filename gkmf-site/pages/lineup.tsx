@@ -1,6 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '/styles/Home.module.css'
+import { Canvas } from '@react-three/fiber'
+import Capsule from './capsule'
+import Icosahedron from './icosahedron'
+import Cone from './cone'
+import Torus from './torus'
 
 export default function Lineup () {
   return(
@@ -14,16 +19,13 @@ export default function Lineup () {
   </Head>
 
   <h1 > Lineup </h1>
-        <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/placeholder-2.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+    <div className={styles.canvas}>
+          <Canvas>
+            <Capsule position  = {[0, 0, 0]} />
+          </Canvas>
+
         </div>
+
         <h2>Spatula x 4</h2>
         <p>
         Scraping frozen plutonium since age four,

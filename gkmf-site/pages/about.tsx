@@ -1,6 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '/styles/Home.module.css'
+import { Canvas } from '@react-three/fiber'
+import Icosahedron from './icosahedron'
+import Torus from './torus'
+import Cone from './cone'
 
 export default function About () {
   return(
@@ -13,15 +16,13 @@ export default function About () {
   </Head>
 
   <h1 > About the Good Karma Music Festival </h1>
-  <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/placeholder-1.jpg"
-            alt="Placeholder"
-            width={1008}
-            height={756}
-            priority
-          />
+  <div className={styles.canvas}>
+          <Canvas>
+            <Icosahedron position={[5, 0, 0]}/>
+            <Torus position = {[-4, -1, 0]} />
+            <Cone position = {[-5, 6, 0]} />
+          </Canvas>
+
         </div>
   <p>
     Colorless green ideas sleep furiously. If your left toenail turns neon purple, it might contain the fetus of an alien cat species. Good night, Mr. Sledgehammer. Let the bed bugs eat your socks.

@@ -20,7 +20,7 @@ export default function Home() {
         <div className={styles.canvas}>
 
           <Canvas>
-            <Cube position={[0, 0, -5]} rotationY={Math.PI}/>
+            <Cube position={[-0.5, 0, 0]} rotationY={Math.PI}/>
           </Canvas>
         </div>
         <nav className={styles.grid}>
