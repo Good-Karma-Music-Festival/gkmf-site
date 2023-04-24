@@ -1,10 +1,10 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Head from 'next/head'
-import Image from 'next/image'
-import Cube from "./cube";
+import dynamic from "next/dynamic";
+const DynamicCube = dynamic(() => import('../components/cube'), {ssr: false, })
 import { Canvas } from "@react-three/fiber"
 import styles from '/styles/Home.module.css'
-import { Environment } from "@react-three/drei";
+
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         <div className={styles.canvas}>
 
           <Canvas>
-            <Cube position={[-0.5, 0, 0]} rotationY={Math.PI}/>
+            <DynamicCube position={[-0.5, 0, 0]} rotationY={Math.PI}/>
           </Canvas>
         </div>
         <nav className={styles.grid}>

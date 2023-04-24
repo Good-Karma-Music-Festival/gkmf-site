@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import styles from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
-import Capsule from './capsule'
-import Icosahedron from './icosahedron'
-import Cone from './cone'
-import Torus from './torus'
+const DynamicCapsule = dynamic(() => import('../components/capsule'), {ssr:false, })
+import Icosahedron from '../components/icosahedron'
+import Cone from '../components/cone'
+import Torus from '../components/torus'
 
 export default function Lineup () {
   return(
@@ -21,7 +22,7 @@ export default function Lineup () {
   <h1 > Lineup </h1>
     <div className={styles.canvas}>
           <Canvas>
-            <Capsule position  = {[0, 0, 0]} />
+            <DynamicCapsule position  = {[0, 0, 0]} />
           </Canvas>
 
         </div>

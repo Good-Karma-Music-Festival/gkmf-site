@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useFrame, useLoader } from '@react-three/fiber';
-import { Texture, TextureLoader } from 'three';
+import { TextureLoader } from 'three';
 
 export default function Cube (props: any){
-  const meshRef = React.useRef();
+  const meshRef = React.useRef<THREE.Mesh>(null);
   const colorMap = useLoader(TextureLoader, '/gkmf-logo.png');
 
 
   useFrame(({ clock }) => {
 
-    meshRef.current.rotation.y = clock.getElapsedTime() / 2;
-
+    if(meshRef.current !== null){
+      meshRef.current.rotation.y = clock.getElapsedTime() / 2;
+    }
   });
 
   return (

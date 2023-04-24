@@ -1,9 +1,13 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import styles from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
-import Icosahedron from './icosahedron'
-import Torus from './torus'
-import Cone from './cone'
+const DynamicIcosahedron = dynamic(() => import('../components/icosahedron'), {ssr: false, })
+
+const DynamicTorus = dynamic(() => import('../components/torus'), {ssr: false, })
+// import Cone from '../components/cone'
+
+const DynamicCone = dynamic(() => import('../components/cone'), {ssr: false, })
 
 export default function About () {
   return(
@@ -18,9 +22,9 @@ export default function About () {
   <h1 > About the Good Karma Music Festival </h1>
   <div className={styles.canvas}>
           <Canvas>
-            <Icosahedron position={[5, 0, 0]}/>
-            <Torus position = {[-4, -1, 0]} />
-            <Cone position = {[-5, 6, 0]} />
+            <DynamicIcosahedron position={[5, 0, 0]}/>
+            <DynamicTorus position = {[-4, -1, 0]} />
+            <DynamicCone position = {[-5, 6, 0]} />
           </Canvas>
 
         </div>
