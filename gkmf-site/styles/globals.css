@@ -24,7 +24,6 @@ body {
 }
 
 body {
-  /* background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242)); */
   background: transparent;
 }
 
@@ -78,7 +77,7 @@ h1 {
 }
 
 p{
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: 'Roboto Mono';
   margin-left: 25%;
   padding: 0;

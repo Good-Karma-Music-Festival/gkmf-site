@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import styles from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
-const DynamicCapsule = dynamic(() => import('../components/capsule'), {ssr:false, })
-import Icosahedron from '../components/icosahedron'
-import Cone from '../components/cone'
-import Torus from '../components/torus'
+
+const DynamicBox = dynamic(() => import('../components/box'));
+import { OrbitControls } from '@react-three/drei'
 
 export default function Lineup () {
   return(
@@ -18,13 +16,12 @@ export default function Lineup () {
     <link rel="icon" href="/favicon.ico" />
 
   </Head>
-
   <h1 > Lineup </h1>
-    <div className={styles.canvas}>
+    <div className={styles.lineup}>
           <Canvas>
-            <DynamicCapsule position  = {[0, 0, 0]} />
+            <OrbitControls />
+            <DynamicBox position  = {[0, 0, 0]} />
           </Canvas>
-
         </div>
 
         <h2>Spatula x 4</h2>
@@ -34,30 +31,22 @@ export default function Lineup () {
         Their newest single, The Misshapen Egg, has been streamed over 200 times at Walmart. You can often catch them chasing purple instrusive thoughts beachside.
         </p>
 
-        <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/placeholder-3.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+        <div className={styles.lineup}>
+          <Canvas>
+            <OrbitControls />
+            <DynamicBox position  = {[0, 0, 0]} />
+          </Canvas>
         </div>
         <h2>Sprocket Girls</h2>
         <p>
         Hailing from Picher, Oklahoma, the Sprocket Girls first debuted at Woodstock 99. They have since released fourteen studio albums, nine of which sold exactly 13 copies. Upcoming collaborations include a tour with one of Michael Jacksons leftover fingernails and a single with Frank Zappa.
         </p>
 
-        <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/pf.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+        <div className={styles.lineup}>
+          <Canvas>
+            <OrbitControls />
+            <DynamicBox position  = {[0, 0, 0]} />
+          </Canvas>
         </div>
         <h2>Pixelated Flesh</h2>
         <p>
@@ -66,21 +55,15 @@ export default function Lineup () {
 
         </p>
 
-        <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/placeholder-4.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+        <div className={styles.lineup}>
+          <Canvas>
+            <OrbitControls />
+            <DynamicBox position  = {[0, 0, 0]} />
+          </Canvas>
         </div>
         <h2>Marty Thee Stallion</h2>
         <p>
         Im a sausage-shaped 78, XX canine who was abandoned on a freeway in Southern California and rehomed twice before finding my forever home at the age of six months. I am a dachsweiler who can make at least 10 different noises and miraculously, have not yet destroyed my unicorn plush.
-
-
         </p>
 </>
   )

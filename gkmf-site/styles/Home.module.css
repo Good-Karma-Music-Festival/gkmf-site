@@ -1,7 +1,4 @@
-.lineup{
-  min-width: 500px;
-  min-height: 500px;
-}
+
 
 .main {
   display: flex;
@@ -11,6 +8,15 @@
   padding: 6rem;
   background-color: transparent;
   min-height: 100vh;
+}
+
+.lineup {
+  z-index: 1;
+  background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242));
+  display: block;
+  overflow:visible;
+  margin:3rem;
+
 }
 
 
