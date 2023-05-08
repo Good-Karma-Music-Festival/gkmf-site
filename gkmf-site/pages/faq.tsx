@@ -1,8 +1,56 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '/styles/Home.module.css'
+import { Canvas } from '@react-three/fiber'
+import React, { useState, useEffect} from 'react'
+import Faq from "react-faq-component";
+import dynamic from 'next/dynamic'
+const DynamicCapsule = dynamic(() => import('../components/capsule'), {ssr: false, })
 
-export default function Faq () {
+const data = {
+  title: "Frequently Asked Questions (FAQ)",
+  rows: [
+      {
+          title: "Q. Is water wet?",
+          content: `A. Pylons are dry.`,
+      },
+      {
+          title: "Q. Is mac and cheese available for purchase?",
+          content:
+              "A. It is only if you donate belly button lint.",
+      },
+      {
+          title: "Q. Did Luigi Russolo have an udder protruding from his left kneecap?",
+          content: `A. What do you think? `,
+      },
+      {
+          title: "Q. Where can I buy witchcraft supplies in advance of the festival?",
+          content: `A. You can find each of our vendors underneath either stage.`,
+      },
+      {
+        title: "Q. Does it hurt the horse?",
+        content: `A. No.`,
+    },
+  ],
+};
+
+const style = {
+  bgColor: "transparent",
+  titleTextColor: "blue",
+  rowTitleColor: "red",
+  // rowContentColor: 'grey',
+  // arrowColor: "red",
+};
+
+const config = {
+  // animate: true,
+  // arrowIcon: "V",
+  // tabFocus: true
+};
+
+
+export default function faqSection (props: any ) {
+
+
   return (
   <>
     <Head>
@@ -11,33 +59,17 @@ export default function Faq () {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <h1 > Frequently Asked Questions (FAQ) </h1>
-    <ul>
-      <li>
-        <h3 className={styles.faq}>Q. Is water wet?</h3>
-        <h4>A. Pylons are dry.</h4>
-      </li>
+    {/* <Canvas className={styles.canvas}>
+      <DynamicCapsule />
+    </Canvas> */}
 
-      <li>
-        <h3 className={styles.faq}>Q. Is mac and cheese available for purchase?</h3>
-        <h4>A. It is only if you donate belly button lint.</h4>
-      </li>
-
-      <li>
-        <h3 className={styles.faq}>Q. Did Luigi Russolo have an udder protruding from his left kneecap?</h3>
-        <h4>A. What do you think?</h4>
-      </li>
-
-      <li>
-        <h3 className={styles.faq}>Q. Where can I buy witchcraft supplies in advance of the festival?</h3>
-        <h4>A. You can find each of our vendors underneath either stage.</h4>
-      </li>
-
-      <li>
-        <h3 className={styles.faq}>Q. Does it hurt the horse?</h3>
-        <h4>No.</h4>
-      </li>
-    </ul>
+    <div>
+    <Faq
+        data={data}
+        style={style}
+        config={config}
+      />
+    </div>
   </>
   )
 }

@@ -15,6 +15,7 @@ export default function Box(props: any){
   useFrame(({ clock }) => {
 
     if(meshRef.current !== null){
+
       meshRef.current.rotation.y = clock.getElapsedTime() / 4;
     }
 

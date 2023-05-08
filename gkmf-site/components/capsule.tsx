@@ -10,7 +10,8 @@ export default function Capsule(props: any){
   useFrame(({ clock }) => {
 
     if(meshRef.current !== null){
-      meshRef.current.rotation.y = clock.getElapsedTime() / 4;
+      meshRef.current.rotation.y = clock.getElapsedTime() / 8;
+      meshRef.current.rotation.z = clock.getElapsedTime() / 8;
     }
 
   });
@@ -18,7 +19,7 @@ export default function Capsule(props: any){
   return (
 
     <mesh {...props} ref={meshRef} castShadow>
-      <capsuleGeometry args={[1, 4, 1, 10]} />
+      <capsuleGeometry args={[1.2, 4.8, 1, 10]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>
   )

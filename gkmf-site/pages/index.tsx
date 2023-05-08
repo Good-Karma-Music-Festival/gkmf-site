@@ -2,6 +2,7 @@ import React from "react";
 import Head from 'next/head'
 import dynamic from "next/dynamic";
 const DynamicCube = dynamic(() => import('../components/cube'), {ssr: false, })
+
 import { Canvas } from "@react-three/fiber"
 import styles from '/styles/Home.module.css'
 
@@ -17,12 +18,6 @@ export default function Home() {
 
       </Head>
       <main className={styles.main}>
-        <div className={styles.canvas}>
-
-          <Canvas>
-            <DynamicCube position={[-0.5, 0, 0]} rotationY={Math.PI}/>
-          </Canvas>
-        </div>
         <nav className={styles.grid}>
           <ul>
             <li>
@@ -92,6 +87,9 @@ export default function Home() {
             </li>
           </ul>
         </nav>
+          <Canvas className={styles.canvas}>
+            <DynamicCube position={[-0.5, 0, 0]} rotationY={Math.PI}/>
+          </Canvas >
 
         <time>
           November 4th 2023
