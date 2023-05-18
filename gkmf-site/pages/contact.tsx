@@ -26,7 +26,7 @@ export default function Contact () {
     <li>All other inquiries: whatchamacallit@idontknow.gov</li>
   </ul>
   <Canvas>
-    <DynamicDodecahedron position={[5, 0, 0]}/>
+    <DynamicDodecahedron position={[0, 0, 0]}/>
     <TrackballControls />
   </Canvas>
 </>

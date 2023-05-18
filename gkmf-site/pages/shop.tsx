@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 const DynamicSphere = dynamic(() => import('../components/sphere'), {ssr: false, })
+
 import styles from '/styles/Home.module.css'
 
 export default function Shop () {

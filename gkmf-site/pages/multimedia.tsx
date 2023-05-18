@@ -1,6 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '/styles/Home.module.css'
+import dynamic from 'next/dynamic'
+const DynamicRing = dynamic(() => import('../components/ring'), {ssr: false, })
+const DynamicCircle = dynamic(() => import('../components/circle'), {ssr: false, })
+const DynamicPlane = dynamic(() => import('../components/plane'), {ssr: false, })
+const DynamicTetrahedron = dynamic(() => import('../components/tetrahedron'), {ssr: false, })
+import { OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+
 
 export default function Multimedia () {
   return(
@@ -15,14 +22,10 @@ export default function Multimedia () {
 
   <h1 > Multimedia </h1>
         <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/placeholder-5.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+          <Canvas>
+            <OrbitControls />
+            <DynamicCircle position  = {[0, 0, 0]} />
+          </Canvas>
         </div>
         <h2>Tuscan Room</h2>
         <p>
@@ -30,14 +33,10 @@ export default function Multimedia () {
         </p>
 
         <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/placeholder-6.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+          <Canvas>
+            <OrbitControls />
+            <DynamicRing position  = {[0, 0, 0]} />
+          </Canvas>
         </div>
         <h2>Mirror</h2>
         <p>
@@ -45,14 +44,10 @@ export default function Multimedia () {
         </p>
 
         <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/placeholder-7.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+        <Canvas>
+            <OrbitControls />
+            <DynamicPlane position  = {[0, 0, 0]} />
+        </Canvas>
         </div>
         <h2>Ear Slaw</h2>
         <p>
@@ -61,14 +56,10 @@ export default function Multimedia () {
         </p>
 
         <div className={styles.center}>
-              <Image
-                className={styles.logo}
-                src="/placeholder-8.jpg"
-                alt="Placeholder"
-                width={1008}
-                height={756}
-                priority
-              />
+        <Canvas>
+            <OrbitControls />
+            <DynamicTetrahedron position  = {[0, 0, 0]} />
+          </Canvas>
         </div>
         <h2>Meat Suit Scrambler</h2>
         <p>

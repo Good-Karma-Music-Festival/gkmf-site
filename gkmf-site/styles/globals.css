@@ -11,7 +11,7 @@ time{
 }
 body{
   margin: 0;
-  /* background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242)) !important; */
+  background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242)) !important;
 }
 
 * {
