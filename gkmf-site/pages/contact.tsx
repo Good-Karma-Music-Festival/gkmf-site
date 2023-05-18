@@ -1,6 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import dynamic from 'next/dynamic'
+import { Canvas } from '@react-three/fiber'
+import { TrackballControls } from '@react-three/drei'
 import styles from '/styles/Home.module.css'
+const DynamicDodecahedron = dynamic(() => import('../components/dodecahedron'), {ssr: false, })
 
 export default function Contact () {
   return(
@@ -22,6 +25,10 @@ export default function Contact () {
     <li>For class action lawsuits: sue@us.us</li>
     <li>All other inquiries: whatchamacallit@idontknow.gov</li>
   </ul>
+  <Canvas>
+    <DynamicDodecahedron position={[5, 0, 0]}/>
+    <TrackballControls />
+  </Canvas>
 </>
   )
 }

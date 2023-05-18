@@ -5,8 +5,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: transparent;
   /* padding: 6rem; */
   min-height: 100vh;
+}
+
+#faq {
+  background-color: aqua !important;
 }
 
 .lineup {
@@ -18,7 +23,6 @@
   min-height: 10% !important;
 
 }
-
 
 .canvas{
   background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242));

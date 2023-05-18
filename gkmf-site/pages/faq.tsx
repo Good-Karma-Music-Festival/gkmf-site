@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import styles from '/styles/Home.module.css'
+import style from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
 import React, { useState, useEffect} from 'react'
 import Faq from "react-faq-component";
+import { TrackballControls } from '@react-three/drei';
 import dynamic from 'next/dynamic'
 const DynamicCapsule = dynamic(() => import('../components/capsule'), {ssr: false, })
 
@@ -31,24 +32,27 @@ const data = {
         content: `A. No.`,
     },
   ],
-};
 
-const style = {
-  bgColor: "transparent",
-  titleTextColor: "blue",
-  rowTitleColor: "red",
-  // rowContentColor: 'grey',
-  // arrowColor: "red",
-};
+}
 
-const config = {
-  // animate: true,
-  // arrowIcon: "V",
-  // tabFocus: true
-};
+const styles = {
+  bgColor: 'transparent',
+  titleTextColor: '#ff32ff',
+  titleTextSize: '48px',
+  rowTitleColor: '#ff0000',
+  rowTitleTextSize: 'large',
+  rowContentColor: 'black',
+  rowContentTextSize: '16px',
+  rowContentPaddingTop: '5px',
+  rowContentPaddingBottom: '5px',
+  rowContentPaddingLeft: '25px',
+  rowContentPaddingRight: '75px',
+  arrowColor: "red",
+  transitionDuration: "0.5s",
+  timingFunc: "ease-in-out"
+}
 
-
-export default function faqSection (props: any ) {
+export default function faqSection (props: any) {
 
 
   return (
@@ -59,15 +63,17 @@ export default function faqSection (props: any ) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    {/* <Canvas className={styles.canvas}>
-      <DynamicCapsule />
-    </Canvas> */}
+    <Canvas className={style.canvas}>
+      <DynamicCapsule position={[0, 0, -10]} />
+      <TrackballControls />
+    </Canvas>
 
     <div>
     <Faq
+        {...props}
+        id="faq"
         data={data}
-        style={style}
-        config={config}
+        styles={styles}
       />
     </div>
   </>

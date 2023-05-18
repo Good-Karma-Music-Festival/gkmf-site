@@ -1,5 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import dynamic from 'next/dynamic'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+const DynamicSphere = dynamic(() => import('../components/sphere'), {ssr: false, })
 import styles from '/styles/Home.module.css'
 
 export default function Shop () {
@@ -19,6 +22,11 @@ export default function Shop () {
     <li><a href="https://heyrooted.com/products/peruvian-apple-cactus-cereus-repandus?variant=42049993408694&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwitShBhA6EiwAq3RqAyZSebSmHMSwKkN9jWGi2M6CTXsKNkRkQSU6YJEA5hVfOGye-x4JjBoC8ZgQAvD_BwE" className={styles.card}>Purchase cacti here</a></li>
     <li><a href="https://www.mercari.com/us/item/m45521900381/" className={styles.card}>Purchase a doll here</a></li>
   </ul>
+  <Canvas>
+    <DynamicSphere position={[0, 0, 0]} />
+    <OrbitControls />
+  </Canvas>
+
 </>
   )
 }
