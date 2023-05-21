@@ -23,7 +23,7 @@ export default function Torus(props: any){
   return (
 
     <mesh {...props} ref={meshRef} castShadow>
-      <torusGeometry args={[1.2, 0.4, 4, 6]} />
+      <torusGeometry args={[0.5, 0.75, 4, 6]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>
   )

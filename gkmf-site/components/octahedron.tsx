@@ -2,22 +2,30 @@ import React from 'react';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 
-export default function Cube (props: any){
+
+export default function Octahedron(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
-  const colorMap = useLoader(TextureLoader, '/Good Karma Logo_bluecircle.png');
+  const colorMap =  useLoader(TextureLoader, '/roads.jpg');
+
 
 
   useFrame(({ clock }) => {
 
     if(meshRef.current !== null){
-      meshRef.current.rotation.y = clock.getElapsedTime() / 2;
+
+      meshRef.current.position.z = Math.sin(clock.getElapsedTime() / 4);
     }
+
   });
 
   return (
+
     <mesh {...props} ref={meshRef} castShadow>
-      <boxGeometry args={[3, 3, 3]} />
+      <octahedronGeometry args={[2, 0]} />
       <meshBasicMaterial map={colorMap} />
+
     </mesh>
   )
+
+
 }

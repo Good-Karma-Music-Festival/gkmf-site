@@ -35,7 +35,6 @@
   margin: 0;
   padding:0;
 }
-
 .description {
   display: inherit;
   justify-content: inherit;
@@ -116,14 +115,19 @@
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  .card:hover {
+  /* .card:hover {
     color: black;
 
   }
 
+
   .card:hover span {
     transform: translateX(4px);
-  }
+  } */
+
+  /* .social:hover {
+    color: black;
+  } */
 }
 
 @media (prefers-reduced-motion) {
@@ -204,6 +208,7 @@
     z-index: 1;
   }
 }
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {

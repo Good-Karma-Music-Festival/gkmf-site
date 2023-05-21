@@ -18,7 +18,7 @@ export default function Icosahedron(props: any){
   return (
 
     <mesh {...props} ref={meshRef} castShadow>
-      <icosahedronGeometry args={[0.5, 0]} />
+      <icosahedronGeometry args={[2, 0]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>
   )
