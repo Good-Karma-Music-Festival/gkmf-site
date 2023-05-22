@@ -6,10 +6,12 @@
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  /* padding: 6rem; */
   min-height: 100vh;
 }
 
+.border{
+  border: 3px outset gray;
+}
 #faq {
   background-color: aqua !important;
 }
@@ -65,6 +67,7 @@
   font-size: 2.5rem;
   color: rgb(255,50,255);
 }
+
 
 .card span {
   display: inline-block;

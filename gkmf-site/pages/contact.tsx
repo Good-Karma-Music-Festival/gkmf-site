@@ -22,7 +22,10 @@ export default function Contact (event: Event) {
     <link rel="icon" href="/favicon.png" />
 
   </Head>
-
+  <Canvas>
+    <DynamicDodecahedron position={[0, 0, 0]}/>
+    <TrackballControls />
+  </Canvas>
   <h1 > Contact: </h1>
   <ul>
     <li>
@@ -48,10 +51,6 @@ export default function Contact (event: Event) {
         </a>
     </li>
   </ul>
-  <Canvas>
-    <DynamicDodecahedron position={[0, 0, 0]}/>
-    <TrackballControls />
-  </Canvas>
 </>
   )
 }

@@ -5,7 +5,7 @@ import { TextureLoader } from 'three';
 
 export default function Capsule(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
-  const colorMap =  useLoader(TextureLoader, '/houses.jpg');
+  const colorMap =  useLoader(TextureLoader, '/backs.jpg');
 
   useFrame(({ clock }) => {
 

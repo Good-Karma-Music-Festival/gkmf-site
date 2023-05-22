@@ -16,8 +16,6 @@ export default function Lineup () {
 
   </Head>
   <h1 > Lineup </h1>
-
-        <div className={styles.lineup}>
           <Canvas>
             <OrbitControls />
             <DynamicBox
@@ -29,7 +27,7 @@ export default function Lineup () {
             image6={'/pf5.jpg'}
              />
           </Canvas>
-        </div>
+
         <h2>Pixelated Flesh</h2>
         <p>
         Greetings! I am a mammal who codes and plays the viola, mandolin, and keyboards. My goal is to expand the boundaries between our minds, artistic creation, science, and language by straddling the boundaries between them. I have performed and composed in a variety of settings, as well as worked in scientific environments. Many people told me to pick between STEM and music and I never quite completed this task. I strive to create new ways to consume music. Have a look around this page and adjacent ones.

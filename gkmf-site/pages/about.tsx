@@ -2,10 +2,10 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import styles from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 const DynamicIcosahedron = dynamic(() => import('../components/icosahedron'), {ssr: false, })
 
 const DynamicTorus = dynamic(() => import('../components/torus'), {ssr: false, })
-// import Cone from '../components/cone'
 
 const DynamicCone = dynamic(() => import('../components/cone'), {ssr: false, })
 
@@ -18,7 +18,12 @@ export default function About () {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.png" />
   </Head>
-
+  <Canvas className={styles.canvas}>
+    <DynamicIcosahedron position={[5, -3, 0]}/>
+    <DynamicTorus position = {[-4, -4, 0]} />
+    <DynamicCone position = {[-5, 3, 0]} />
+    <OrbitControls />
+  </Canvas>
   <h1 > About Us: </h1>
   <p>
     The Good Karma Music & Arts Festival is excited to announce its official launch, set to take place on November 4 at the Santa Clarita Skate Park and Field. The festival, previously known as the Summer Meltdown Autism Awareness Music Festival, has been re-branded with the goal of training and educating people with disabilities to work in the entertainment industry.
@@ -28,14 +33,6 @@ export default function About () {
     <br />
     The goal of GKMAF is twofold: to provide residents of Southern California with a fun, unique festival experience, as well as to celebrate diversity in the workplace, which enables students to showcase their strengths and talents to potential employers.
   </p>
-  <div className={styles.canvas}>
-          <Canvas>
-            <DynamicIcosahedron position={[5, 0, 0]}/>
-            <DynamicTorus position = {[-4, -1, 0]} />
-            <DynamicCone position = {[-5, 6, 0]} />
-          </Canvas>
-
-  </div>
 </>
   )
 }

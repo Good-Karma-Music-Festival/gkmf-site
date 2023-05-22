@@ -6,7 +6,7 @@ import { TextureLoader } from 'three';
 export default function Torus(props: any){
 
   const meshRef = React.useRef<THREE.Mesh>(null);
-  const colorMap =  useLoader(TextureLoader, '/sunset.jpg');
+  const colorMap =  useLoader(TextureLoader, '/bass.jpg');
 
   useFrame(({ clock }) => {
 

@@ -98,7 +98,7 @@ export default function Home() {
           </ul>
         </nav>
           <Canvas className={styles.canvas}>
-            <DynamicCube position={[-0.5, 0, 0]} rotationY={Math.PI}/>
+            <DynamicCube position={[0, 0, 0]} rotationY={Math.PI}/>
           </Canvas >
         <time>
           November 4th 2023

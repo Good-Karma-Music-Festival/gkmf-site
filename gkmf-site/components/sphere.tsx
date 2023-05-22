@@ -5,7 +5,7 @@ import { TextureLoader } from 'three';
 
 export default function Sphere(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
-  const colorMap =  useLoader(TextureLoader, '/mountains.jpg');
+  const colorMap =  useLoader(TextureLoader, '/swag.jpg');
 
 
 

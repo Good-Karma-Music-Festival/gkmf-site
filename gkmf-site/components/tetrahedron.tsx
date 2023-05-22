@@ -5,7 +5,7 @@ import { TextureLoader } from 'three';
 
 export default function Tetrahedron(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
-  const colorMap =  useLoader(TextureLoader, '/waterpark.jpg');
+  const colorMap =  useLoader(TextureLoader, '/preview2.png');
 
   useFrame(({ clock }) => {
 

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import style from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
-import React, { useState, useEffect} from 'react'
 import Faq from "react-faq-component";
 import { TrackballControls } from '@react-three/drei';
 import dynamic from 'next/dynamic'
@@ -11,25 +10,25 @@ const data = {
   title: "Frequently Asked Questions (FAQ)",
   rows: [
       {
-          title: "Q. Is water wet?",
-          content: `A. Pylons are dry.`,
+          title: "Q. What accessibility provisions are in place at the venue?",
+          content: `A. There will be ramps, ADA toilets, and a quiet space.`,
       },
       {
-          title: "Q. Is mac and cheese available for purchase?",
+          title: "Q. Are the shows 21+?",
           content:
-              "A. It is only if you donate belly button lint.",
+              "A. No. GKMAF is all-ages.",
       },
       {
-          title: "Q. Did Luigi Russolo have an udder protruding from his left kneecap?",
-          content: `A. What do you think? `,
+          title: "Q. Will there be food?",
+          content: `A. Yes. There will be several food trucks on-site. `,
       },
       {
-          title: "Q. Where can I buy witchcraft supplies in advance of the festival?",
-          content: `A. You can find each of our vendors underneath either stage.`,
+          title: "Q. Where can I park?",
+          content: `A. There will be limited parking next to the venue, as well as street parking.`,
       },
       {
-        title: "Q. Does it hurt the horse?",
-        content: `A. No.`,
+        title: "Q. Will the skatepark be open?",
+        content: `A. Yes.`,
     },
   ],
 
@@ -67,15 +66,12 @@ export default function faqSection (props: any) {
       <DynamicCapsule position={[0, 0, -10]} />
       <TrackballControls />
     </Canvas>
-
-    <div>
     <Faq
         {...props}
         id="faq"
         data={data}
         styles={styles}
       />
-    </div>
   </>
   )
 }

@@ -83,3 +83,6 @@ p{
   word-wrap: break-word;
 }
 
+body{
+  margin: 1rem;
+}

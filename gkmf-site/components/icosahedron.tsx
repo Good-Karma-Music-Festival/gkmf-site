@@ -5,7 +5,7 @@ import { TextureLoader } from 'three';
 
 export default function Icosahedron(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
-  const colorMap =  useLoader(TextureLoader, '/skatepark.jpg');
+  const colorMap =  useLoader(TextureLoader, '/painter.jpg');
 
   useFrame(({ clock }) => {
 

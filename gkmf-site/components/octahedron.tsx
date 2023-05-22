@@ -5,7 +5,7 @@ import { TextureLoader } from 'three';
 
 export default function Octahedron(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
-  const colorMap =  useLoader(TextureLoader, '/roads.jpg');
+  const colorMap =  useLoader(TextureLoader, '/vader.jpg');
 
 
 
