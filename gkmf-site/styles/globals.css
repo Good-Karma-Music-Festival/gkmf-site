@@ -1,11 +1,3 @@
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242));
-  }
-}
-
 time{
   position:relative;
 }
@@ -52,7 +44,6 @@ h4{
   font-size: 2.5rem;
   padding: 20px;
   margin: 3rem;
-  border-right: 5px solid red;
 }
 
 h3 {
@@ -91,11 +82,4 @@ p{
   max-width:50%;
   word-wrap: break-word;
 }
-/* a:hover{
-  color:black;
-} */
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+

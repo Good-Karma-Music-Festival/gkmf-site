@@ -2,7 +2,6 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import styles from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
-
 const DynamicBox = dynamic(() => import('../components/box'));
 import { OrbitControls } from '@react-three/drei'
 
@@ -17,35 +16,18 @@ export default function Lineup () {
 
   </Head>
   <h1 > Lineup </h1>
-    <div className={styles.lineup}>
-          <Canvas>
-            <OrbitControls />
-            <DynamicBox position  = {[0, 0, 0]} />
-          </Canvas>
-        </div>
-
-        <h2>Spatula x 4</h2>
-        <p>
-        Scraping frozen plutonium since age four,
-        Spatula x 4 have been nominated for seven Razzie awards and two Grammys.
-        Their newest single, The Misshapen Egg, has been streamed over 200 times at Walmart. You can often catch them chasing purple instrusive thoughts beachside.
-        </p>
 
         <div className={styles.lineup}>
           <Canvas>
             <OrbitControls />
-            <DynamicBox position  = {[0, 0, 0]} />
-          </Canvas>
-        </div>
-        <h2>Sprocket Girls</h2>
-        <p>
-        Hailing from Picher, Oklahoma, the Sprocket Girls first debuted at Woodstock 99. They have since released fourteen studio albums, nine of which sold exactly 13 copies. Upcoming collaborations include a tour with one of Michael Jacksons leftover fingernails and a single with Frank Zappa.
-        </p>
-
-        <div className={styles.lineup}>
-          <Canvas>
-            <OrbitControls />
-            <DynamicBox position  = {[0, 0, 0]} />
+            <DynamicBox
+            image1={'/pflogo.png'}
+            image2={'/pf.jpg'}
+            image3={'/pf2.jpg'}
+            image4={'/pf3.jpg'}
+            image5={'/pf4.png'}
+            image6={'/pf5.jpg'}
+             />
           </Canvas>
         </div>
         <h2>Pixelated Flesh</h2>
@@ -55,16 +37,7 @@ export default function Lineup () {
 
         </p>
 
-        <div className={styles.lineup}>
-          <Canvas>
-            <OrbitControls />
-            <DynamicBox position  = {[0, 0, 0]} />
-          </Canvas>
-        </div>
-        <h2>Marty Thee Stallion</h2>
-        <p>
-        Im a sausage-shaped 78, XX canine who was abandoned on a freeway in Southern California and rehomed twice before finding my forever home at the age of six months. I am a dachsweiler who can make at least 10 different noises and miraculously, have not yet destroyed my unicorn plush.
-        </p>
+        <h4>More will be announced soon!</h4>
 </>
   )
 }
