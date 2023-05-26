@@ -1,11 +1,13 @@
 import React from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, useLoader, useThree } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 
 
 export default function Plane(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
   const colorMap =  useLoader(TextureLoader, '/preview1.png');
+
+  const { viewport } = useThree();
 
   useFrame(({ clock }) => {
 
@@ -17,7 +19,7 @@ export default function Plane(props: any){
 
   return (
 
-    <mesh {...props} ref={meshRef} castShadow>
+    <mesh {...props} scale = {viewport.width / 100} ref={meshRef} castShadow>
       <planeGeometry args={[3, 3]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, useLoader, useThree } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 
 
@@ -7,9 +7,11 @@ export default function Dodecahedron(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
   const colorMap =  useLoader(TextureLoader, '/jump.jpg');
 
-
+  const { viewport } = useThree();
 
   useFrame(({ clock }) => {
+
+
 
     if(meshRef.current !== null){
 
@@ -20,7 +22,7 @@ export default function Dodecahedron(props: any){
 
   return (
 
-    <mesh {...props} ref={meshRef} castShadow>
+    <mesh {...props} scale = {viewport.width / 100} ref={meshRef} castShadow>
       <dodecahedronGeometry args={[2, 0]} />
       <meshBasicMaterial map={colorMap} />
 

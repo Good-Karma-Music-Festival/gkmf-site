@@ -4,10 +4,6 @@ import { Canvas } from '@react-three/fiber'
 import { TrackballControls } from '@react-three/drei'
 const DynamicOctahedron = dynamic(() => import('../components/octahedron'), {ssr: false, })
 
-const style = {color: "#ff32ff", marginRight: "1rem", marginTop: "1rem"}
-
-
-
 export default function Contact (event: Event) {
 
   return(

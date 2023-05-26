@@ -3,7 +3,11 @@ time{
 }
 body{
   margin: 0;
-  background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242)) !important;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Roboto Mono';
+  margin: 1rem;
+  background: linear-gradient(to right, rgb(208, 247, 245), rgb(85, 237, 242));
 }
 
 * {
@@ -12,23 +16,11 @@ body{
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: 'Roboto Mono';
-}
-
-body {
-  background: transparent;
-}
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
-
 
 li {
   margin-bottom: 6rem;
@@ -81,8 +73,4 @@ p{
   color: black;
   max-width:50%;
   word-wrap: break-word;
-}
-
-body{
-  margin: 1rem;
 }

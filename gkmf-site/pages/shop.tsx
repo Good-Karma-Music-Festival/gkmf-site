@@ -25,7 +25,6 @@ export default function Shop () {
     <DynamicSphere position={[0, 0, 0]} />
     <OrbitControls />
   </Canvas>
-
 </>
   )
 }

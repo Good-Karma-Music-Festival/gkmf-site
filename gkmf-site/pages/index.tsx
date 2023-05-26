@@ -1,11 +1,9 @@
 import React from "react";
 import Head from 'next/head'
 import dynamic from "next/dynamic";
-const DynamicCube = dynamic(() => import('../components/cube'), {ssr: false, })
-
+const DynamicBox = dynamic(() => import('../components/box'), {ssr: false, })
 import { Canvas } from "@react-three/fiber"
 import styles from '/styles/Home.module.css'
-
 
 export default function Home() {
   return (
@@ -98,7 +96,16 @@ export default function Home() {
           </ul>
         </nav>
           <Canvas className={styles.canvas}>
-            <DynamicCube position={[0, 0, 0]} rotationY={Math.PI}/>
+            <DynamicBox image1={'/YIC_LOGO.png'}
+            image2={'/YIC_LOGO.png'}
+            image3={'/Good Karma Logo_bluecircle.png'}
+            image4={'/Good Karma Logo_bluecircle.png'}
+            image5={'/GKMAF_TOP.jpg'}
+            image6={'GKMAF_BTM.jpg'}
+            sizeX={3}
+            sizeY={3}
+            sizeZ={3}
+            scale={15}/>
           </Canvas >
         <time>
           November 4th 2023

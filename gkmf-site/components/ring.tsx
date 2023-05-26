@@ -1,11 +1,13 @@
 import React from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, useLoader, useThree } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 
 
 export default function Ring(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
   const colorMap =  useLoader(TextureLoader, '/waterpark.jpg');
+
+  const { viewport } = useThree();
 
   useFrame(({ clock }) => {
 
@@ -17,7 +19,7 @@ export default function Ring(props: any){
 
   return (
 
-    <mesh {...props} ref={meshRef} castShadow>
+    <mesh {...props} scale = {viewport.width / 100} ref={meshRef} castShadow>
       <ringGeometry args={[2, 3, 7]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>

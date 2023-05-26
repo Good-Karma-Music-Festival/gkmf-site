@@ -2,8 +2,6 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { Canvas } from '@react-three/fiber'
 import { TrackballControls } from '@react-three/drei'
-import styles from '/styles/Home.module.css'
-import { IconContext } from 'react-icons'
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'
 const DynamicDodecahedron = dynamic(() => import('../components/dodecahedron'), {ssr: false, })
 

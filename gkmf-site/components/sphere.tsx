@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, useLoader, useThree } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 
 
@@ -7,7 +7,7 @@ export default function Sphere(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
   const colorMap =  useLoader(TextureLoader, '/swag.jpg');
 
-
+  const { viewport } = useThree();
 
   useFrame(({ clock }) => {
 
@@ -20,7 +20,7 @@ export default function Sphere(props: any){
 
   return (
 
-    <mesh {...props} ref={meshRef} castShadow>
+    <mesh {...props} scale = {viewport.width / 120} ref={meshRef} castShadow>
       <sphereGeometry args={[3, 64, 32]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>
