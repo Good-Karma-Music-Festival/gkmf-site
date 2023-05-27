@@ -29,8 +29,8 @@
   display: block;
   position: absolute !important;
   z-index: -1;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 }
 .description {
   display: inherit;

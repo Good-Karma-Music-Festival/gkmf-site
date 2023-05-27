@@ -1,11 +1,12 @@
 import React from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, useLoader, useThree } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 
 
 export default function Cone(props: any){
   const meshRef = React.useRef<THREE.Mesh>(null);
   const colorMap =  useLoader(TextureLoader, '/crowd.jpg');
+  const { viewport } = useThree();
 
   useFrame(({ clock }) => {
 
@@ -17,7 +18,7 @@ export default function Cone(props: any){
 
   return (
 
-    <mesh {...props} ref={meshRef} castShadow>
+    <mesh {...props} scale={viewport.width / 10} ref={meshRef} castShadow>
       <cylinderGeometry args={[0.5, 0.25, 1, 5]} />
       <meshBasicMaterial map={colorMap} />
     </mesh>

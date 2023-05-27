@@ -90,7 +90,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                  Become a Sponsor
+              Become a Sponsor
               </a>
             </li>
           </ul>
@@ -105,7 +105,7 @@ export default function Home() {
             sizeX={3}
             sizeY={3}
             sizeZ={3}
-            scale={15}/>
+            scale={20}/>
           </Canvas >
         <time>
           November 4th 2023
