@@ -35,17 +35,17 @@ const data = {
 }
 
 const styles = {
-  bgColor: 'transparent',
+  bgColor: 'rgba(0, 0, 0, 0.1)',
   titleTextColor: '#ff32ff',
-  titleTextSize: '48px',
+  titleTextSize: '4vw',
   rowTitleColor: '#ff0000',
-  rowTitleTextSize: 'large',
+  rowTitleTextSize: '3vw',
   rowContentColor: 'black',
-  rowContentTextSize: '16px',
-  rowContentPaddingTop: '5px',
-  rowContentPaddingBottom: '5px',
-  rowContentPaddingLeft: '25px',
-  rowContentPaddingRight: '75px',
+  rowContentTextSize: '3vw',
+  rowContentPaddingTop: '1wv',
+  rowContentPaddingBottom: '1vw',
+  rowContentPaddingLeft: '1vw',
+  rowContentPaddingRight: '1vw',
   arrowColor: "red",
   transitionDuration: "0.5s",
   timingFunc: "ease-in-out"
