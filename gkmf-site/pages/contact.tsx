@@ -5,9 +5,7 @@ import { TrackballControls } from '@react-three/drei'
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'
 const DynamicDodecahedron = dynamic(() => import('../components/dodecahedron'), {ssr: false, })
 
-const style = {color: "#ff32ff", marginRight: "1rem", marginTop: "1rem"}
-
-
+const style = {color: "#fb5345", marginRight: "1rem", marginTop: "1rem"}
 
 export default function Contact (event: Event) {
 

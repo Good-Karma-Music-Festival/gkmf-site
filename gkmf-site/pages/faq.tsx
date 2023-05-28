@@ -35,10 +35,10 @@ const data = {
 }
 
 const styles = {
-  bgColor: 'rgba(0, 0, 0, 0.1)',
-  titleTextColor: '#ff32ff',
+  bgColor: 'rgba(50,192,251,0.5)',
+  titleTextColor: 'white',
   titleTextSize: '4vw',
-  rowTitleColor: '#ff0000',
+  rowTitleColor: '#fb5345',
   rowTitleTextSize: '3vw',
   rowContentColor: 'black',
   rowContentTextSize: '3vw',
@@ -46,10 +46,18 @@ const styles = {
   rowContentPaddingBottom: '1vw',
   rowContentPaddingLeft: '1vw',
   rowContentPaddingRight: '1vw',
-  arrowColor: "red",
+  arrowColor: "#fb5345",
   transitionDuration: "0.5s",
   timingFunc: "ease-in-out"
 }
+
+const config = {
+  animate: true,
+  arrowIcon: "V",
+  openOnload: 0,
+  expandIcon: "+",
+  collapseIcon: "-",
+};
 
 export default function faqSection (props: any) {
 
@@ -71,6 +79,7 @@ export default function faqSection (props: any) {
         id="faq"
         data={data}
         styles={styles}
+        config={config}
       />
   </>
   )
