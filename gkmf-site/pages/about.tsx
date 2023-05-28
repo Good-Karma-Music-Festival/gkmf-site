@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import styles from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 const DynamicIcosahedron = dynamic(() => import('../components/icosahedron'), {ssr: false, })

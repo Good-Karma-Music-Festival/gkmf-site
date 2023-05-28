@@ -97,15 +97,15 @@ export default function Home() {
         </nav>
           <Canvas className={styles.canvas}>
             <DynamicBox image1={'/YIC_LOGO.png'}
-            image2={'/YIC_LOGO.png'}
-            image3={'/Good Karma Logo_bluecircle.png'}
-            image4={'/Good Karma Logo_bluecircle.png'}
+            image2={'/GKMAF_BTM.jpg'}
+            image3={'/filler.png'}
+            image4={'/filler.png'}
             image5={'/GKMAF_TOP.jpg'}
-            image6={'GKMAF_BTM.jpg'}
+            image6={'/Good Karma Logo_bluecircle.jpg'}
             sizeX={3}
             sizeY={3}
             sizeZ={3}
-            scale={20}/>
+            scale={13}/>
           </Canvas >
         <time>
           November 4th 2023

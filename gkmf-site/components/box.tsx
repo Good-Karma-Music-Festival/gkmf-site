@@ -20,17 +20,14 @@ export default function Box({image1, image2, image3, image4, image5, image6, siz
   const [map1, map2, map3, map4, map5, map6] =  useLoader(TextureLoader, [image1, image2, image3, image4, image5, image6])
 
   useFrame(({ clock }) => {
-
     if(meshRef.current !== null){
 
       meshRef.current.rotation.y = clock.getElapsedTime() / 4;
     }
-
   });
 
   return (
-
-    <mesh ref={meshRef} scale={(viewport.width / scale)} castShadow>
+    <mesh ref={meshRef} scale={(viewport.width / scale)}>
       <boxGeometry args={[sizeX, sizeY, sizeZ]} />
       <meshBasicMaterial attach="material-0" map={map1} />
       <meshBasicMaterial attach="material-1" map={map2} />
