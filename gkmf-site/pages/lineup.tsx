@@ -24,10 +24,10 @@ export default function Lineup () {
             image4={'/pf3.jpg'}
             image5={'/pf4.png'}
             image6={'/pf5.jpg'}
-            sizeX={5}
+            sizeX={3}
             sizeY={3}
             sizeZ={3}
-            scale={120}
+            scale={80}
              />
           </Canvas>
 
