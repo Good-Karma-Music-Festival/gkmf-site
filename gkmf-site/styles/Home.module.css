@@ -17,15 +17,14 @@
   overflow:visible;
   margin:3rem;
   min-height: 10% !important;
-
 }
 
 .canvas{
   display: block;
   position: absolute !important;
   z-index: -1;
-  width: 50%;
-  height: 50%;
+  width: 50vw;
+  height: 50vh;
 }
 
 .grid {
@@ -38,14 +37,4 @@
   padding: 1rem 1.2rem;
   font-family: 'Roboto Mono';
   color: white;
-}
-
-@media (max-width: 800px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-  }
 }

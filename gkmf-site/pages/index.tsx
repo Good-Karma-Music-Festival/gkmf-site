@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import styles from '/styles/Home.module.css'
+import css from '/styles/Home.module.css'
 import { Canvas } from '@react-three/fiber'
 const DynamicBox = dynamic(() => import('../components/box'), { ssr: false })
 
@@ -16,15 +16,15 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.png' />
       </Head>
-      <main className={styles.main}>
-        <nav className={styles.grid}>
+      <main className={css.main}>
+        <nav className={css.grid}>
           <ul>
             {pageNames.map((item, index:number) => {
               return (
                 <li key={index}>
                   <a
                     href={'/' + item.toLowerCase()}
-                    className={styles.card}
+                    className={css.card}
                     target='_blank'
                     rel='noopener noreferrer'
                   >
@@ -35,7 +35,7 @@ export default function Home() {
             })}
           </ul>
         </nav>
-        <Canvas className={styles.canvas}>
+        <Canvas className={css.canvas}>
           <DynamicBox images={[
             '/YIC_LOGO.png',
             '/GKMAF_BTM.jpg',
@@ -45,16 +45,15 @@ export default function Home() {
             '/Good Karma Logo_bluecircle.jpg'
           ]}
           dimensions={[3, 3, 3]}
-          scale={13}/>
+          scale={15}/>
         </Canvas >
-        <div>
-          <time>
-            November 4th 2023
-          </time>
-          <address>
+        <time>
+          November 4th 2023
+          <span>
+            <br />
             Santa Clarita Skatepark
-          </address>
-        </div>
+          </span>
+        </time>
       </main>
     </>
   )

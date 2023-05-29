@@ -1,12 +1,12 @@
 time{
   position:relative;
   left: 7vw;
+  font-size: 1.5vw !important;
 }
 
 a:hover, path:hover, section:hover{
   color: rgb(92,75,236);
 }
-
 
 body{
   margin: 0;
@@ -16,16 +16,17 @@ body{
   margin: 1rem;
   background: repeating-linear-gradient(
     0deg,
-    #fb9858,
-    #bfe298,
+    #bfe298 0.01vmin,
+    #fb9858 0.001vmin,
     #4fd286 0.1vmin,
     #f9cf22 0.1vmin
   );
 
 }
 
-div{
-  border: none;
+div {
+  display: flex;
+  flex-direction: column;
 }
 
 section{
@@ -59,7 +60,6 @@ li {
   font-size: 2.5vw;
   padding: 2vw;
   margin: 2vw;
-
 }
 
 h4{
@@ -105,13 +105,4 @@ p{
   color: black;
   max-width:50%;
   word-wrap: break-word;
-}
-
-@media (max-width: 400px) {
-  time{
-    left: 0;
-    margin: 0;
-    top: 75vw;
-    padding: 0;
-  }
 }
