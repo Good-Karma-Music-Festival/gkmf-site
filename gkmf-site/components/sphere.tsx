@@ -21,7 +21,9 @@ export default function Sphere({ image, args } : Props){
 
   return (
     <mesh  scale = {viewport.width / 120} ref={meshRef} castShadow>
-      <sphereGeometry args={[args[0], args[1], args[2]]} />
+      <sphereGeometry
+      args={[args[0], args[1], args[2]]}
+      />
       <meshBasicMaterial map={texture} />
     </mesh>
   )
