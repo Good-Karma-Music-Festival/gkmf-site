@@ -6,9 +6,13 @@
   background: transparent;
 }
 
-#faq {
-  background-color: aqua !important;
+.social{
+  color: rgb(251, 83, 69);
+  margin-right: 1vw;
+  margin-top: 1vw;
+
 }
+
 
 .info{
   margin: 2vw;

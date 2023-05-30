@@ -1,22 +1,14 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
-const DynamicIcosahedron = dynamic(() => import('../components/icosahedron'), {ssr: false})
 
 export default function About () {
   return(
   <>
     <Head>
     <title>About</title>
-    <meta name="description" content="About the Good Karma Music and Arts Festival" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.png" />
+    <meta name='description' content='About the Good Karma Music and Arts Festival' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='icon' href='/favicon.png' />
   </Head>
-  <Canvas>
-    <DynamicIcosahedron position={[-3, 4, -5]}/>
-    <OrbitControls />
-  </Canvas>
   <h1 > About Us: </h1>
   <p>
     The Good Karma Music & Arts Festival is excited to announce its official launch, set to take place on November 4 at the Santa Clarita Skate Park and Field. The festival, previously known as the Summer Meltdown Autism Awareness Music Festival, has been re-branded with the goal of training and educating people with disabilities to work in the entertainment industry.

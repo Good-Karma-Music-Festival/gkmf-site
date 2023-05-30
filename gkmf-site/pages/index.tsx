@@ -35,7 +35,7 @@ export default function Home() {
             })}
           </ul>
         </nav>
-        <Canvas className={css.canvas}>
+        <Canvas className={css.canvas} aria-label={'Good Karma Music and Arts Festival'} >
           <DynamicBox images={[
             '/YIC_LOGO.png',
             '/GKMAF_BTM.jpg',

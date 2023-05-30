@@ -68,7 +68,7 @@ export default function faqSection (props: any) {
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <link rel='icon' href='/favicon.png' />
     </Head>
-    <Canvas className={css.canvas}>
+    <Canvas className={css.canvas} aria-label={'crowd projected onto a capsule'}>
       <DynamicCapsule args={[1.5, 2, 10, 32, 64]} image={'/backs.jpg'} position={[0, 0, -10]} />
       <TrackballControls />
     </Canvas>

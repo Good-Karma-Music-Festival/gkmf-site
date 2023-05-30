@@ -12,9 +12,9 @@ export default function MultimediaInstallations () {
     <>
       <Head>
         <title>Multimedia</title>
-        <meta name="description" content="Multimedia installations produced by Yes I Can participants" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+        <meta name='description' content='Multimedia installations produced by Yes I Can participants' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.png' />
       </Head>
       <h1>Multimedia</h1>
       {Object.keys(multimediaData['multimediaInstallations']).map((item:string='0', index:number) => {
@@ -25,7 +25,7 @@ export default function MultimediaInstallations () {
 
         return (
           <div key={index}>
-            <Canvas>
+            <Canvas aria-label={name}>
               <OrbitControls />
               <DynamicSphere
                 image={image}
@@ -33,11 +33,11 @@ export default function MultimediaInstallations () {
               />
             </Canvas>
             <h2>
-                <a href={url}>
-                  {name}
-                </a>
-              </h2>
-              <p>{description}</p>
+              <a href={url}>
+                {name}
+              </a>
+            </h2>
+            <p>{description}</p>
           </div>
         );
       })}

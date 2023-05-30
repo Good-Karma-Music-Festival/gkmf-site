@@ -25,7 +25,7 @@ export default function Lineup () {
 
             return (
             <div key={index}>
-              <Canvas>
+              <Canvas aria-label={name}>
                 <OrbitControls />
                 <DynamicBox
                   images={[

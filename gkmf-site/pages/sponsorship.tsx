@@ -10,9 +10,9 @@ export default function Contact (event: Event) {
   <>
     <Head>
     <title>Become a Sponsor</title>
-    <meta name="description" content="Become a sponsor of the Gook Karma Music and Arts Festival" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.png" />
+    <meta name='description' content='Become a sponsor of the Gook Karma Music and Arts Festival' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='icon' href='/favicon.png' />
 
   </Head>
     <div className={css.info}>
