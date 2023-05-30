@@ -15,7 +15,7 @@ export default function Shop () {
   </Head>
   <div className={css.info}>
     <h1>Shop</h1>
-      <a href='https://www.bonfire.com/good-karma-music-amp-arts-festival-yic-logo/' className={css.card}>
+      <a href='https://www.bonfire.com/good-karma-music-amp-arts-festival-yic-logo/' className={css.link}>
         Buy Merch
       </a>
   </div>

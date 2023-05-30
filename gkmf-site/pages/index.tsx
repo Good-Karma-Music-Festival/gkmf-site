@@ -17,14 +17,14 @@ export default function Home() {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <main className={css.main}>
-        <nav className={css.grid}>
+        <nav className={css.nav}>
           <ul>
             {pageNames.map((item:any, index:number) => {
               return (
                 <li key={index}>
                   <a
                     href={'/' + item.toLowerCase()}
-                    className={css.card}
+                    className={css.link}
                     target='_blank'
                     rel='noopener noreferrer'
                   >

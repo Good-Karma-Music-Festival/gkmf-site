@@ -2,8 +2,9 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import multimediaInfo from '../public/multimedia.json'
 import Multimedia from '../multimedia'
-import { OrbitControls } from '@react-three/drei'
+import Alert from '@mui/material/Alert'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 const DynamicSphere = dynamic(() => import('../components/sphere'), { ssr: false })
 
 export default function MultimediaInstallations () {
@@ -16,6 +17,9 @@ export default function MultimediaInstallations () {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.png' />
       </Head>
+      <Alert severity="warning">
+              Hover over or click on text to scroll.
+      </Alert>
       <h1>Multimedia</h1>
       {Object.keys(multimediaData['multimediaInstallations']).map((item:string='0', index:number) => {
         let image = multimediaData['multimediaInstallations'][index]['details']['image'];

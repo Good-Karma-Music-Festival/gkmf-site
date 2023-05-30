@@ -21,7 +21,7 @@ export default function Contact (event: Event) {
     <DynamicSphere image={'/crowd.jpg'} args={[15, 64, 32]} />
     <TrackballControls />
   </Canvas>
-  <h1 > Contact: </h1>
+  <h1 > Contact </h1>
   <ul>
     <li>
       <i>For General Information & Inquiries: </i>
