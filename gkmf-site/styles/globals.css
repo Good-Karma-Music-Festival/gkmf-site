@@ -16,10 +16,10 @@ body{
   margin: 1rem;
   background: repeating-linear-gradient(
     0deg,
-    #bfe298 0.01vmin,
-    #fb9858 0.001vmin,
-    #4fd286 0.1vmin,
-    #f9cf22 0.1vmin
+    rgb(191, 226, 152) 0.01vmin,
+    rgb(249, 207, 34)0.001vmin,
+    rgb(79, 210, 134) 0.1vmin,
+    rgb(50, 192, 251) 0.1vmin
   );
 
 }
@@ -46,11 +46,9 @@ a {
   max-width: 50%;
   word-wrap: break-word;
 }
-
 canvas {
   z-index: -1;
 }
-
 
 li {
   list-style-type: none;
@@ -72,7 +70,7 @@ h4{
 }
 
 h3 {
-  color: #fb5345;
+  color: rgb(251, 83, 69);
   text-align: left;
   margin-left: 10%;
   font-size: 2.5rem;
@@ -82,7 +80,7 @@ h3 {
 }
 
 h2, time {
-  color: #fb5345;
+  color: rgb(251, 83, 69);
   font-size: 2.5vw;
   margin: 3vw;
   padding: 4vw;

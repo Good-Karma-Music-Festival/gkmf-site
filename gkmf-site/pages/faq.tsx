@@ -35,7 +35,7 @@ const data = {
 }
 
 const styles = {
-  bgColor: 'rgba(50,192,251,0.5)',
+  bgColor: 'rgba(50, 192, 251, 0.5)',
   titleTextColor: 'white',
   titleTextSize: '4vw',
   rowTitleColor: 'rgba(251, 83, 69, 1)',
@@ -69,7 +69,7 @@ export default function faqSection (props: any) {
       <link rel='icon' href='/favicon.png' />
     </Head>
     <Canvas className={css.canvas}>
-      <DynamicCapsule args={[1.5, 2, 10]} image={'/backs.jpg'} position={[0, 0, -10]} />
+      <DynamicCapsule args={[1.5, 2, 10, 32, 64]} image={'/backs.jpg'} position={[0, 0, -10]} />
       <TrackballControls />
     </Canvas>
     <Faq

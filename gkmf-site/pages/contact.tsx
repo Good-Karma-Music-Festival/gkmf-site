@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import { Canvas } from '@react-three/fiber'
 import { TrackballControls } from '@react-three/drei'
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'
-const DynamicDodecahedron = dynamic(() => import('../components/dodecahedron'), {ssr: false, })
+const DynamicSphere = dynamic(() => import('../components/sphere'), { ssr: false })
 
 const style = {color: "#fb5345", marginRight: "1rem", marginTop: "1rem"}
 
@@ -19,7 +19,7 @@ export default function Contact (event: Event) {
 
   </Head>
   <Canvas>
-    <DynamicDodecahedron position={[0, 0, 0]}/>
+    <DynamicSphere image={'/crowd.jpg'} args={[15, 64, 32]} />
     <TrackballControls />
   </Canvas>
   <h1 > Contact: </h1>

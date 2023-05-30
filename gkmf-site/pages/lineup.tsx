@@ -1,39 +1,49 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import artistInfo from '../public/artists.json'
+import Artists from '../artists'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 const DynamicBox = dynamic(() => import('../components/box'));
 
 export default function Lineup () {
-  return(
-    <>
+  const artistData : Artists  = artistInfo;
+    return(
+      <>
       <Head>
         <title>Lineup</title>
         <meta name='description' content='Lineup for the Good Karma Music and Arts Festival' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.png' />
       </Head>
-      <h1 >Lineup</h1>
-      <Canvas>
-        <OrbitControls />
-        <DynamicBox
-        images={[
-          '/pflogo.jpg',
-          '/pf.jpg',
-          '/pf2.jpg',
-          '/pf3.jpg',
-          '/pf4.jpg',
-          '/pf5.jpg'
-          ]}
-          dimensions={[3, 3, 3]}
-          scale={80}
-        />
-      </Canvas>
-      <h2>Pixelated Flesh</h2>
-      <p>
-        Greetings! I am a mammal who codes and plays the viola, mandolin, and keyboards. My goal is to expand the boundaries between our minds, artistic creation, science, and language by straddling the boundaries between them. I have performed and composed in a variety of settings, as well as worked in scientific environments. Many people told me to pick between STEM and music and I never quite completed this task. I strive to create new ways to consume music. Have a look around this page and adjacent ones.
-      </p>
+      <h1>Lineup</h1>
+        {Object.keys(artistData['artists']).map((item:string='0', index:number) => {
+            let image = artistData['artists'][index]['details']['images'];
+            let name = artistData['artists'][index]['name'];
+            let description = artistData['artists'][index]['details']['description']
+            return (
+            <div key={index}>
+              <Canvas>
+                <OrbitControls />
+                <DynamicBox
+                  images={[
+                    image[0],
+                    image[1],
+                    image[2],
+                    image[3],
+                    image[4],
+                    image[5]
+                  ]}
+                  dimensions={[15, 15, 15]}
+                  scale={80}
+                />
+              </Canvas>
+              <h2>{name}</h2>
+              <p>{description}</p>
+            </div>
+          );
+        })}
       <h4>More will be announced soon!</h4>
   </>
-  )
+    );
 }

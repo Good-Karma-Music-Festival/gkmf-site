@@ -19,7 +19,7 @@ export default function Home() {
       <main className={css.main}>
         <nav className={css.grid}>
           <ul>
-            {pageNames.map((item, index:number) => {
+            {pageNames.map((item:any, index:number) => {
               return (
                 <li key={index}>
                   <a

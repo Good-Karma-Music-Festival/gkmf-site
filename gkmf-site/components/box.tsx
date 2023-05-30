@@ -22,7 +22,7 @@ export default function Box({ images, dimensions, scale } : Props){
   return (
     <mesh ref={ meshRef } scale={(viewport.width / scale)}>
       <boxGeometry args={[dimensions[0], dimensions[1], dimensions[2]]} />
-      { textures.map((item, index:number)=>{
+      { textures.map((item:any, index:number)=>{
         return <meshBasicMaterial key={index} attach={`material-${index}`} map={item} /> }
       ) }
     </mesh>
