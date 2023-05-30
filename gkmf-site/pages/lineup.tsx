@@ -20,7 +20,9 @@ export default function Lineup () {
         {Object.keys(artistData['artists']).map((item:string='0', index:number) => {
             let image = artistData['artists'][index]['details']['images'];
             let name = artistData['artists'][index]['name'];
-            let description = artistData['artists'][index]['details']['description']
+            let description = artistData['artists'][index]['details']['description'];
+            let url = artistData['artists'][index]['details']['url'];
+
             return (
             <div key={index}>
               <Canvas>
@@ -38,7 +40,11 @@ export default function Lineup () {
                   scale={80}
                 />
               </Canvas>
-              <h2>{name}</h2>
+              <h2>
+                <a href={url}>
+                  {name}
+                </a>
+              </h2>
               <p>{description}</p>
             </div>
           );

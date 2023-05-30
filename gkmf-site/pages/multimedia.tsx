@@ -1,12 +1,13 @@
 import Head from 'next/head'
-import css from '/styles/Home.module.css'
 import dynamic from 'next/dynamic'
+import multimediaInfo from '../public/multimedia.json'
+import Multimedia from '../multimedia'
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-const DynamicPlane = dynamic(() => import('../components/plane'), {ssr: false, })
-const DynamicTetrahedron = dynamic(() => import('../components/tetrahedron'), {ssr: false, })
+const DynamicSphere = dynamic(() => import('../components/sphere'), { ssr: false })
 
-export default function Multimedia () {
+export default function MultimediaInstallations () {
+  const multimediaData : Multimedia = multimediaInfo;
   return(
     <>
       <Head>
@@ -15,35 +16,31 @@ export default function Multimedia () {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <h1>Multimedia </h1>
-        <div className={css.center}>
-        <Canvas>
-            <OrbitControls />
-            <DynamicPlane position  = {[0, 0, 0]} />
-        </Canvas>
-        </div>
-        <h2>
-          <a href="https://quargsgreene.github.io/meat-suit-scrambler/dist/index.html">
-          Meat Suit Scrambler
-          </a>
-        </h2>
-        <p>
-          The song above will stream while you have the chance to use your mouse, finger, and/or trackpad or toe to manipulate the body parts of a three- dimensional flesh monster via clicking and dragging each textured body part into a configuration of your liking. Make sure the page has loaded before clicking the start button.
-        </p>
-        <div className={css.center}>
-        <Canvas>
-            <OrbitControls />
-            <DynamicTetrahedron position  = {[0, 0, 0]} />
-        </Canvas>
-        </div>
-        <h2>
-          <a href="https://quargsgreene.github.io/long-spider-leg-submersion/">
-          Long Spider Leg Submersion
-          </a>
-        </h2>
-        <p>
-         In this installation, one can once more guess lyrics while also having the opportunity to learn a new fact about underwear via the provied forms. Hints are available for when the user becomes stumped and a complementary microphone-influenced L-system resembling a very large shower-shriveled spider is available for viewing.
-        </p>
+      <h1>Multimedia</h1>
+      {Object.keys(multimediaData['multimediaInstallations']).map((item:string='0', index:number) => {
+        let image = multimediaData['multimediaInstallations'][index]['details']['image'];
+        let name = multimediaData['multimediaInstallations'][index]['name'];
+        let description = multimediaData['multimediaInstallations'][index]['details']['description'];
+        let url = multimediaData['multimediaInstallations'][index]['details']['url'];
+
+        return (
+          <div key={index}>
+            <Canvas>
+              <OrbitControls />
+              <DynamicSphere
+                image={image}
+                args={[15, 64, 32]}
+              />
+            </Canvas>
+            <h2>
+                <a href={url}>
+                  {name}
+                </a>
+              </h2>
+              <p>{description}</p>
+          </div>
+        );
+      })}
         <h4>More is coming soon!</h4>
 </>
   )
